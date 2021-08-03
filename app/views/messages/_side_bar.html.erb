@@ -1,7 +1,7 @@
 <div class="side-bar-top">
   <div class="user-name-container">
     <!--ユーザー名-->
-    <a href="#">Tom</a>
+    <%= link_to "#{current_user.name}", edit_user_path(current_user) %>
   </div>
   <div class="chat-new">
     <!--チャット作成ページへのリンク-->
