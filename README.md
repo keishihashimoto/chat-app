@@ -25,11 +25,11 @@ Things you may want to cover:
 
 ## usersテーブル
 
-| Column            | Type   | Options     |
-| ----------------- | ------ | ----------- |
-| name              | string | null: false |
-| email             | string | null: false |
-|encrypted_password | string | null: false |
+| Column             | Type   | Options     |
+| ------------------ | ------ | ----------- |
+| name               | string | null: false |
+| email              | string | null: false |
+| encrypted_password | string | null: false |
 
 ### Association
 
