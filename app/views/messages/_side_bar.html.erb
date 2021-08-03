@@ -1,4 +1,17 @@
 <div class="side-bar-top">
+  <div class="user-name-container">
+    <!--ユーザー名-->
+    <a href="#">Tom</a>
+  </div>
+  <div class="chat-new">
+    <!--チャット作成ページへのリンク-->
+    <a href="#">チャット作成</a>
+  </div>
 </div>
 <div class="side-bar-main">
+  <% 10.times do |i| %>
+    <div class="chat-room-container">
+      <a href="#"><%= "techroom#{i}" %></a>
+    </div>
+  <% end %>
 </div>

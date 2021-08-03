@@ -10,16 +10,45 @@
   height: 100vh;
 }
 
+/*side-bar上部*/
 .side-bar-top{
   background-color: #253141;
   height: 100px;
   padding: 0 40px 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+.user-name-container a{
+  color: #fafafa;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.chat-new a{
+  font-size: 10px;
+  color: deepskyblue;
+  border: 1px solid lightblue;
+  padding: 14px;
+  text-decoration: none;
+}
+
+/*side-bar下部*/
 .side-bar-main{
   background-color: #2f3e51;
   height: calc(100vh - 100px);
   padding: 0 40px 0 40px;
+  overflow: scroll;
+}
+
+.chat-room-container{
+  padding: 20px 0 40px 0;
+}
+
+.chat-room-container a{
+  color: white;
+  text-decoration: none;
 }
 
 /*chat-main*/
