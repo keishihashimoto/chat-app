@@ -58,20 +58,112 @@
   height: 100vh;
 }
 
+/*chat-main上部*/
 .chat-main-top{
   background-color: #ffffff;
   height: 100px;
   padding: 0 40px 0 40px;
+  display: flex;
+  justify-content: space-between;
 }
 
+.current-chat{
+  font-size: 24px;
+  color: #333;
+  margin-top: 36px;
+}
+
+.chat-delete{
+  border: 1px solid darkred;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.chat-delete a{
+  font-size: 20px;
+  color: darkred;
+  text-decoration: none;
+}
+
+/*メッセージ表示部分*/
 .chat-main-main{
   background-color: #fafafa;
   height: calc(100vh - 100px - 90px);
   padding: 46px 40px 0 40px;
+  overflow: scroll;
 }
 
+.message-container{
+  margin-bottom: 40px;
+}
+
+.top-container{
+  display: flex;
+}
+
+.user-name{
+  padding: 10px 10px 0 0;
+  font-size: 16px;
+  color: #434a54;
+}
+
+.created_at{
+  padding-top: 10px;
+  color: #999;
+  font-size: 12px;
+}
+
+.bottom-container{
+  color: #434a54;
+  font-size: 14px;
+  padding-top: 10px;
+}
+
+/*フォーム部分*/
 .form-container{
   background-color: #dddddd;
   height: 90px;
   padding: 20px 40px 20px 40px;
+  display: flex;
+  align-items: center;
+}
+
+.text_field-container{
+  width: 100%;
+  display: flex;
+  height: 50px;
+}
+
+.message_field{
+  padding-left: 10px;
+  background-color: white;
+  width: 100%;
+  border: none;
+}
+
+.form-image{
+  font-size: 12px;
+  background-color: lightblue;
+  color: white;
+  padding: 12px;
+  width: 60px;
+  margin: 5px 10px;
+  text-align: center;
+}
+
+.hidden{
+  display: none;
+}
+
+.btn-container{
+  padding: 20px 0 20px 15px;
+}
+
+.btn-send{
+  background-color: #38aef0;
+  color: white;
+  padding: 0 20px;
+  border: none;
+  height: 50px;
+  font-size: 16px;
 }

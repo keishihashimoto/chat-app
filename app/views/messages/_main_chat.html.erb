@@ -1,6 +1,41 @@
 <div class="chat-main-top">
+  <div class="right-container">
+    <div class="current-chat">
+      hogefuga
+    </div>
+  </div>
+  <div class="left-container">
+    <div class="chat-delete">
+      <a href="#">チャットを終了する</a>
+    </div>
+  </div>
 </div>
 <div class="chat-main-main">
+  <% 10.times do %>
+    <div class="message-container">
+      <div class="top-container">
+        <div class="user-name">
+          Tom
+        </div>
+        <div class="created_at">
+          2020/3/31(Wed) 12:34:30
+        </div>
+      </div>
+      <div class="bottom-container">
+        おはよう
+      </div>
+    </div>
+  <% end %>
 </div>
 <div class="form-container">
+  <div class="text_field-container">
+    <input type="text" placeholder="type a message" class="message_field">
+    <label class="form-image">
+      <span class="image-file">画像</span>
+      <input type="file" class="hidden">
+    </label>
+  </div>
+  <div class="btn-container">
+    <input type="submit" value="送信" class="btn-send">
+  </div>
 </div>
