@@ -11,21 +11,7 @@
   </div>
 </div>
 <div class="chat-main-main">
-  <% @messages.each do |message| %>
-    <div class="message-container">
-      <div class="top-container">
-        <div class="user-name">
-          <%= message.user %>
-        </div>
-        <div class="created_at">
-          <%= message.created_at %>
-        </div>
-      </div>
-      <div class="bottom-container">
-        <%= message.content %>
-      </div>
-    </div>
-  <% end %>
+  <%= render partial: "message", collection: @messages %>
 </div>
 <%= form_with model: [@room, @message], class: "form-container", local: true do |f| %>
   <div class="text_field-container">
