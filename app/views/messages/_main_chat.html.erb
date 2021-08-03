@@ -1,7 +1,7 @@
 <div class="chat-main-top">
   <div class="right-container">
     <div class="current-chat">
-      <%=  %>
+      <%= @room.name %>
     </div>
   </div>
   <div class="left-container">
@@ -11,31 +11,31 @@
   </div>
 </div>
 <div class="chat-main-main">
-  <% 10.times do %>
+  <% @messages.each do |message| %>
     <div class="message-container">
       <div class="top-container">
         <div class="user-name">
-          Tom
+          <%= message.user %>
         </div>
         <div class="created_at">
-          2020/3/31(Wed) 12:34:30
+          <%= message.created_at %>
         </div>
       </div>
       <div class="bottom-container">
-        おはよう
+        <%= message.content %>
       </div>
     </div>
   <% end %>
 </div>
-<div class="form-container">
+<%= form_with model: [@room, @message], class: "form-container", local: true do |f| %>
   <div class="text_field-container">
-    <input type="text" placeholder="type a message" class="message_field">
+    <%= f.text_field :content, class: "message_field", placeholder: "type a message" %>
     <label class="form-image">
       <span class="image-file">画像</span>
-      <input type="file" class="hidden">
+      <%= f.file_field :image, class: "hidden" %>
     </label>
   </div>
   <div class="btn-container">
-    <input type="submit" value="送信" class="btn-send">
+    <%= f.submit "送信", class: "btn-send" %>
   </div>
-</div>
+<% end %>
