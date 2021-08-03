@@ -5,13 +5,13 @@
   </div>
   <div class="chat-new">
     <!--チャット作成ページへのリンク-->
-    <a href="#">チャット作成</a>
+    <%= link_to "チャットを作成する", new_room_path %>
   </div>
 </div>
 <div class="side-bar-main">
-  <% 10.times do |i| %>
+  <% current_user.rooms.each do |room| %>
     <div class="chat-room-container">
-      <a href="#"><%= "techroom#{i}" %></a>
+      <%= link_to "#{room.name}", "#" %>
     </div>
   <% end %>
 </div>
