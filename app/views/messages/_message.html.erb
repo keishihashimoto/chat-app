@@ -1,16 +1,14 @@
-<% @messages.each do |message| %>
-  <div class="message-container">
-    <div class="top-container">
-      <div class="user-name">
-        <%= message.user.name %>
-      </div>
-      <div class="created_at">
-        <%= l message.created_at %>
-      </div>
+<div class="message-container">
+  <div class="top-container">
+    <div class="user-name">
+      <%= message.user.name %>
     </div>
-    <div class="bottom-container">
-      <%= message.content %>
+    <div class="created_at">
+      <%= l message.created_at %>
     </div>
-    <%= image_tag message.image.variant(resize: "500x500"), class: "message-image" if message.image.attached? %>
   </div>
-<% end %>
+  <div class="bottom-container">
+    <%= message.content %>
+  </div>
+  <%= image_tag message.image.variant(resize: "500x500"), class: "message-image" if message.image.attached? %>
+</div>
