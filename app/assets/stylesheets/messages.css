@@ -167,3 +167,8 @@
   height: 50px;
   font-size: 16px;
 }
+
+/*バリデーションエラーメッセージの非表示*/
+.field_with_errors{
+  display: contents;
+}

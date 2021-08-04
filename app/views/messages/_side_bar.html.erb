@@ -11,7 +11,7 @@
 <div class="side-bar-main">
   <% current_user.rooms.each do |room| %>
     <div class="chat-room-container">
-      <%= link_to "#{room.name}", "#" %>
+      <%= link_to "#{room.name}", room_messages_path(room) %>
     </div>
   <% end %>
 </div>
