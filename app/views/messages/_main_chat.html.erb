@@ -13,15 +13,13 @@
 <div class="chat-main-main">
   <%= render partial: "message", collection: @messages %>
 </div>
-<%= form_with model: [@room, @message], class: "form-container", local: true do |f| %>
-  <div class="text_field-container">
-    <%= f.text_field :content, class: "message_field", placeholder: "type a message" %>
+<%= form_with model: [@room, @message], class: "form", local: true do |f| %>
+  <div class="form-input">
+    <%= f.text_field :content, class: "form-message", placeholder: "type a message" %>
     <label class="form-image">
       <span class="image-file">画像</span>
       <%= f.file_field :image, class: "hidden" %>
     </label>
   </div>
-  <div class="btn-container">
-    <%= f.submit "送信", class: "btn-send" %>
-  </div>
+  <%= f.submit "送信", class: "form-submit" %>
 <% end %>
